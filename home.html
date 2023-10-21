@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Enviar Email</title>
+</head>
+<body>
+    <div class="conteudo-recuperar">
+        <form class="conteudo-form" action="/enviar-email" method="post" id="emailForm">
+            <label for="email" class="e-mail">Digite o seu E-mail</label>
+            <input type="text" id="email" class="campo-email">
+            <button type="submit" class="botao" id="enviarBotao">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('emailForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            var email = document.getElementById('email').value;
+
+            fetch('/enviar-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: 'email=' + email
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data); 
+            })
+            .catch(error => {
+                console.error(error);
+                alert('Erro ao enviar o e-mail.');
+            });
+        });
+    </script>
+</body>
+</html>

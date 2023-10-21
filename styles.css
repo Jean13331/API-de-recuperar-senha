@@ -1,0 +1,54 @@
+body, h1 {
+    margin: 0;
+    padding: 0;
+}
+.conteudo-recuperar{
+    position: fixed;
+    display: flex;
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+        .conteudo-form{
+        position: absolute;
+        border-radius: 60px;
+        background-color: #8d8d8d;
+        text-align: center;
+        width: 55%;
+        height: 40%;
+
+            .e-mail{
+            position: absolute;
+            margin-top: 6.2%; 
+            margin-left: 8%;
+            color: #ffffff;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 32px;
+            }
+
+            .campo-email{
+            text-align: center;
+            border-radius: 100px;
+            margin-top: 13.5%;
+            width: 400px;
+            height: 25px;
+            }
+
+            .botao{
+            position: fixed;
+            margin-top: 11.2%;
+            margin-left: -5%;
+            color: white;
+            background-color: #627268;
+            border-radius: 90px;
+            border: 6px solid rgb(255, 255, 255);
+            width: 8%;
+            height: 4.8%;
+            }
+
+        }
+}
